@@ -1,0 +1,21 @@
+# GUI
+Roblox GUI for our game (Loading Screen)
+
+under starter gui add screen gui
+add a frame to the screen gui and make it as large as the screen (manually (1,0) (1,0)
+add a text button (PLAY!)
+add a text label (NoobzNoobz's Difficulty Chart Obby!)
+background transparency to the text label = 1
+under starter gui insert a local script
+name frame "Screen"
+name text button "Play"
+(COPY THE SCRIPT BELOW THAT I MADE)
+
+local Screen = script.Parent.Screen
+local PlayButton = Screen.Play
+
+PlayButton.Activated:Connect(function()
+  script.Parent.Screen:TweenPosition(UDim2.new(0, 0, -1, 0), "In","Quart")
+  wait(1)
+  script.Parent:Destroy()
+end)
